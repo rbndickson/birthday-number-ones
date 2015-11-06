@@ -1,0 +1,33 @@
+body a, body a:hover {
+  color: #f46b45;
+}
+
+.navigation-col, .navigation-col a {
+  padding-top: 175px;
+  font-size: 12pt;
+  color: #f46b45;
+}
+
+.title {
+  font-family: 'Luckiest Guy', Impact, sans-serif;
+  font-size: 96px;
+  line-height: 86px;
+  background: -webkit-linear-gradient(#f46b45, #F0CB35);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video-title {
+  margin-bottom: 20px;
+  font-size: 14pt;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}

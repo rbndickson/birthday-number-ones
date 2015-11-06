@@ -1,0 +1,25 @@
+<div class="video-title text-center">
+  <% if @year == '1953' %>
+    The year is <b>1953, the year you were born!</b> The number one record on your birthday was <i><%= @info[:artist_and_title] %></i>.
+  <% else %>
+    The year is <b><%= @year %>!</b> It was your <b><%= @info[:birthday] %> birthday</b>. The number one record on your birthday was <i><%= @info[:artist_and_title] %></i>.
+  <% end %>
+</div>
+
+<row>
+  <div class="navigation-col col-xs-2">
+    <% unless @year == '1953' %>
+      <a href="/<%= (@year.to_i - 1).to_s %>"><span class="glyphicon glyphicon glyphicon-chevron-left" aria-hidden="true"></span>previous year</a>
+    <% end %>
+  </div>
+
+  <div class="col-xs-8">
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/<%= @info[:youtube_id] %>"></iframe>
+    </div>
+  </div>
+
+  <div class="navigation-col col-xs-2 text-right text-">
+    <a href="/<%= @year.succ %>">next year<span class="glyphicon glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+  </div>
+</row>

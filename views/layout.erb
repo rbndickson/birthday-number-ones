@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/application.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Luckiest+Guy' rel='stylesheet' type='text/css'>
+  <script src="/application.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+
+<body style="padding-top: 10px;">
+  <div class="container">
+    <div class="title text-center">
+      Happy Birthday Dad!
+      <img src="images/dad.jpg" height="80">
+    </div>
+
+    <div class="clearfix" id="birthday_song">
+      <%= yield %>
+    </div>
+
+    <ul class="list-inline links text-center">
+      <li class="link-line">
+        <a href="https://www.youtube.com/playlist?list=PL57uOaR-cS600kYiOTK8E34dXceTjucYU">YouTube Playlist</a>
+      </li>
+
+      <li class="link-line">
+        <div class="dropdown text-center">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            Jump to Year <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu scrollable-menu" aria-labelledby="dropdownMenu2">
+          <% @years.each do |year, info| %>
+            <li><a href="/<%= year %>"><%= year %></a></li>
+          <% end %>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <div class="text-center" id="footer">
+      <p class="muted">Have a great day! Love fom Robin and Jane :)</p>
+    </div>
+  </div>
+</body>
+
+</html>
